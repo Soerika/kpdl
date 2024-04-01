@@ -12,15 +12,15 @@ import reorient_nii as ornt
 
 from matplotlib import pyplot as plt
 
-AMOS_DIR = '/path/to/amos_raw_data_dir/'
+AMOS_DIR = '.'
 BTCV_DIR = '/path/to/btcv_raw_data_dir/'
 C3D_TOOL = '/path/to/c3d_tool'
-OUTPUT_DIR = '/path/to/output_dir/'
+OUTPUT_DIR = '/output/'
 
-dataset = 'btcv'  # can be amos, btcv
-spacing_x = 1.0  # 1.0 for ct 1.5 for mri
-spacing_y = 1.0  # 1.0 for ct 1.5 for mri
-spacing_z = 2.0  # 2.0 for ct 1.5 for mri
+dataset = 'amos'  # can be amos, btcv
+spacing_x = 1.5  # 1.0 for ct 1.5 for mri
+spacing_y = 1.5  # 1.0 for ct 1.5 for mri
+spacing_z = 1.5  # 2.0 for ct 1.5 for mri
 percentile_min = 1  # lower percentile to calculate lower bound for clipping 'mri' images, will be used only if modality == 'mri'
 percentile_max = 99.99  # upper percentile to calculate upper bound for clipping 'mri' images, will be used only if modality == 'mri'
 vol_clip_min = -175  # -175 is a lower bound for CT abdomen window, will be used only if modality == 'ct'
@@ -36,7 +36,7 @@ C3D_TASK_STRING_LBL = \
 
 if dataset == 'amos':
 
-    data = amid.AMOS(root=AMOS_DIR)
+    data = amid.AMOS(root=AMOS_DIR + '\\')
 
     with open(pathlib.Path(AMOS_DIR).joinpath('dataset.json')) as f:
         data_partitions = json.load(f)

@@ -13,7 +13,7 @@ from torch.utils.data import Dataset
 from hb_ssl.utils.box import mask_to_bbox
 from hb_ssl.processing import BODY_THRESHOLD, sample_patches
 
-AMOS_DATA_DIR = '/path/to/preprocessed_amos_mri_dataset/'
+AMOS_DATA_DIR = 'output'
 AMOS_LABELS = {
     1: 'Spleen',
     2: 'Right kidney',
