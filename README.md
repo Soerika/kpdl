@@ -8,7 +8,12 @@ Code is based on [vox2vec repo](https://github.com/mishgon/vox2vec).
 ## Pretrained models
 
 [Pretrained weights for CT and MRI models.](https://drive.google.com/drive/folders/106mM3_s7m_wu4EoRr-AhilIJ5-r80thU?usp=sharing) 
-
+%pip install clearml
+%pip install imops
+%pip install gdown
+%pip install connectome==0.9.0
+%pip install cloudpickle==2.2.1
+%pip install tornado==6.3.3
 
 ## Usage
 
