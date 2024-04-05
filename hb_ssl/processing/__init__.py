@@ -1,4 +1,4 @@
-from .cropping import CropToBox
+# from .cropping import CropToBox
 from .rescale import RescaleToShape, RescaleToSpacing, locations_to_spacing, LocationsToSpacing
 from .intensities import scale_hu, scale_0_1, gaussian_filter, gaussian_sharpen
 from .orientation import FlipAxesToCanonical
