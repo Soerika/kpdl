@@ -4,4 +4,4 @@
 # from .orientation import FlipAxesToCanonical
 # from .segmentation import labels_to_onehot, onehot_to_labels, LabelsToOnehot
 from .patches import sample_box, sample_patches
-# from .ct import get_body_mask, BODY_THRESHOLD
+from .ct import get_body_mask, BODY_THRESHOLD
