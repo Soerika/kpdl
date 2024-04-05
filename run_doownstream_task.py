@@ -165,7 +165,7 @@ def main(args):
         callbacks=callbacks,
         accelerator='gpu',
         max_epochs=args.max_epochs,
-        resume_from_checkpoint=''
+        # resume_from_checkpoint=''
     )
 
     trainer.fit(model, train_dataloaders=train_dataloader, val_dataloaders=val_dataloader)
