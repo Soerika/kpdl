@@ -30,7 +30,7 @@ def parse_args():
     parser.add_argument('--setup', default='from_scratch')  # from_scratch, fine-tuning, probing
 
     parser.add_argument('--ckpt', default='/path/to/pretrained.ckpt')
-    parser.add_argument('--log_dir', default='/path/to/output_dir/')
+    parser.add_argument('--log_dir', default='/log')
 
     parser.add_argument('--split', type=int, default=0)
     parser.add_argument('--examples_num', default='all')

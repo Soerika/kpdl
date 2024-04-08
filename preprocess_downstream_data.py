@@ -12,7 +12,7 @@ import reorient_nii as ornt
 
 from matplotlib import pyplot as plt
 
-AMOS_DIR = '.'
+AMOS_DIR = ''
 BTCV_DIR = '/path/to/btcv_raw_data_dir/'
 C3D_TOOL = '/path/to/c3d_tool'
 OUTPUT_DIR = '/output/'

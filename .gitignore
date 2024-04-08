@@ -5,7 +5,8 @@ __pycache__/
 log_dir/
 output/
 weights/
-
+*.zip
+amos22/
 # C extensions
 *.so
 
