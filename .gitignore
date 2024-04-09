@@ -2,7 +2,6 @@
 __pycache__/
 *.py[cod]
 *$py.class
-log_dir/
 output/
 weights/
 *.zip
