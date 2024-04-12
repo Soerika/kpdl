@@ -42,7 +42,7 @@ if dataset == 'amos':
         data_partitions = json.load(f)
         training_ids = [pathlib.Path(data_sample['image']).name[5:-7] for data_sample in data_partitions['training']][200:]
         validation_ids = [pathlib.Path(data_sample['image']).name[5:-7] for data_sample in data_partitions['validation']][100:]
-        ids = training_ids + validation_ids + testing_ids
+        ids = training_ids + validation_ids
 
 elif dataset == 'btcv':
     ids = sorted(list(pathlib.Path(BTCV_DIR).rglob('img*.nii.gz')))

@@ -26,7 +26,7 @@ from hb_ssl.utils.misc import save_json
 def parse_args():
     parser = ArgumentParser()
     
-    parser.add_argument('--dataset', default='btcv')  # amos or btcv
+    parser.add_argument('--dataset', default='amos')  # amos or btcv
     parser.add_argument('--setup', default='from_scratch')  # from_scratch, fine-tuning, probing
 
     parser.add_argument('--ckpt', default='/path/to/pretrained.ckpt')
@@ -171,6 +171,8 @@ def main(args):
     trainer.fit(model, train_dataloaders=train_dataloader, val_dataloaders=val_dataloader)
 
     log_dir = Path(logger.log_dir)
+    print(log_dir)
+    
     test_metrics = trainer.test(model, dataloaders=test_dataloader, ckpt_path=log_dir / 'checkpoints/best_avg.ckpt')
     save_json(test_metrics, log_dir / 'test_metrics.json')
 
